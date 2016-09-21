@@ -4,6 +4,9 @@ using System.Collections.Generic;
 
 namespace OneSignal.CSharp.SDK.Resources.Notifications
 {
+    /// <summary>
+    /// API Documentation: https://documentation.onesignal.com/docs/notifications-create-notification
+    /// </summary>
     public class NotificationCreateOptions
     {
         /// <summary>
@@ -18,13 +21,32 @@ namespace OneSignal.CSharp.SDK.Resources.Notifications
         /// Each hash must have a language code string for a key, mapped to the localized text you would like users to receive for that language.
         /// English must be included in the hash.
         /// Example: {"en": "English Message", "es": "Spanish Message"}
+        /// See the language codes you can use here: https://documentation.onesignal.com/docs/frequently-asked-questions#section-what-languages-codes-can-i-use-
         /// </summary>
         [JsonProperty("contents")]
         public IDictionary<string, string> Contents { get; set; }
 
+        /// <summary>
+        /// The notification's title, a map of language codes to text for each language.
+        /// Each hash must have a language code string for a key, mapped to the localized text you would like users to receive for that language.
+        /// A default title may be displayed if a title is not provided. 
+        /// Example: {"en": "English Title", "es": "Spanish Title"}
+        /// See the language codes you can use here: https://documentation.onesignal.com/docs/frequently-asked-questions#section-what-languages-codes-can-i-use-
+        /// </summary>
+        [JsonProperty("headings")]
+        public IDictionary<string, string> Headings { get; set; }
+
+        /// <summary>
+        /// Targets notification recipients with filters. 
+        /// This is a array of JSON objects containing field conditions to check.
+        /// </summary>
+        [JsonProperty("filters")]
+        public IList<object> Filters { get; set; }
+
         public NotificationCreateOptions()
         {
             Contents = new Dictionary<string, string>();
+            Headings = new Dictionary<string, string>();
         }
     }
 }
