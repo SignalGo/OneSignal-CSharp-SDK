@@ -1,4 +1,5 @@
-﻿using RestSharp;
+﻿using OneSignal.CSharp.SDK.Serializers;
+using RestSharp;
 
 namespace OneSignal.CSharp.SDK.Resources.Devices
 {
@@ -13,9 +14,9 @@ namespace OneSignal.CSharp.SDK.Resources.Devices
             RestRequest restRequest = new RestRequest("players", Method.POST);
 
             restRequest.AddHeader("Authorization", string.Format("Basic {0}", base.ApiKey));
-            restRequest.AddHeader("Content-type", "application/json");
-            restRequest.AddHeader("Accept", "application/json");
+
             restRequest.RequestFormat = DataFormat.Json;
+            restRequest.JsonSerializer = new NewtonsoftJsonSerializer();
             restRequest.AddBody(options);
 
             IRestResponse<DeviceAddResult> restResponse = base.RestClient.Execute<DeviceAddResult>(restRequest);

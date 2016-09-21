@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OneSignal.CSharp.SDK.Serializers;
+using RestSharp;
 
 namespace OneSignal.CSharp.SDK.Resources.Notifications
 {
@@ -10,7 +11,22 @@ namespace OneSignal.CSharp.SDK.Resources.Notifications
 
         public NotificationCreateResult Create(NotificationCreateOptions options)
         {
-            throw new NotImplementedException();
+            RestRequest restRequest = new RestRequest("notifications", Method.POST);
+
+            restRequest.AddHeader("Authorization", string.Format("Basic {0}", base.ApiKey));
+
+            restRequest.RequestFormat = DataFormat.Json;
+            restRequest.JsonSerializer = new NewtonsoftJsonSerializer();
+            restRequest.AddBody(options);
+
+            IRestResponse<NotificationCreateResult> restResponse = base.RestClient.Execute<NotificationCreateResult>(restRequest);
+
+            if (restResponse.ErrorException != null)
+            {
+                throw restResponse.ErrorException;
+            }
+
+            return restResponse.Data;
         }
     }
 }
