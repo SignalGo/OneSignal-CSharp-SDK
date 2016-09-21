@@ -45,14 +45,17 @@
     <Compile Include="IOneSignalClient.cs" />
     <Compile Include="OneSignalClient.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\BaseResource.cs" />
     <Compile Include="Resources\Devices\DeviceAddOptions.cs" />
     <Compile Include="Resources\Devices\DeviceAddResult.cs" />
+    <Compile Include="Resources\Devices\DevicesResource.cs" />
     <Compile Include="Resources\Devices\DeviceTypeEnum.cs" />
     <Compile Include="Resources\Devices\TestTypeEnum.cs" />
     <Compile Include="Resources\Notifications\INotificationsResource.cs" />
     <Compile Include="Resources\Notifications\NotificationCreateOptions.cs" />
     <Compile Include="Resources\Notifications\NotificationCreateResult.cs" />
     <Compile Include="Resources\Devices\IDevicesResource.cs" />
+    <Compile Include="Resources\Notifications\NotificationsResource.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
