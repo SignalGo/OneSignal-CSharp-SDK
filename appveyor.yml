@@ -1,15 +1,9 @@
-environment:
-  assembly_version: 6.6.0
-  stripe_test_secret_key:
-    secure: +p/EWA8+0B64k7a88nb6ZiSTcv6TIukyhQQU2Ljf7jNVtwVZXhJtNf5LdemV7EuY
+version: 0.1.{build}
+
+configuration: Release
 
 before_build:
-  - nuget restore src\Stripe.sln
+  - nuget restore src\OneSignal.CSharp.SDK.sln
 
 build:
   verbosity: minimal
-
-assembly_info:
-  patch: true
-  file: src\SharedAssemblyInfo.cs
-  assembly_version: '$(assembly_version)'
