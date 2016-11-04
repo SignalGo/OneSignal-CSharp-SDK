@@ -43,6 +43,24 @@ namespace OneSignal.CSharp.SDK.Resources.Notifications
         [JsonProperty("filters")]
         public IList<object> Filters { get; set; }
 
+        /// <summary>
+        /// The segment names you want to target. 
+        /// Users in these segments will receive a notification. 
+        /// This targeting parameter is only compatible with excluded_segments.
+        /// </summary>
+        [JsonProperty("included_segments")]
+        public IList<string> IncludedSegments { get; set; }
+
+        /// <summary>
+        /// Sets the web push notification's icon. 
+        /// An image URL linking to a valid image. 
+        /// Common image types are supported; GIF will not animate. 
+        /// We recommend 256x256 (at least 80x80) to display well on high DPI devices. 
+        /// Firefox will also use this icon, unless you specify firefox_icon.
+        /// </summary>
+        [JsonProperty("chrome_web_icon")]
+        public string ChromeWebIcon { get; set; }
+
         public NotificationCreateOptions()
         {
             Contents = new Dictionary<string, string>();
