@@ -37,6 +37,14 @@ namespace OneSignal.CSharp.SDK.Resources.Notifications
         public IDictionary<string, string> Headings { get; set; }
 
         /// <summary>
+        /// A custom map of data that is passed back to your app.
+        /// Example: {"abc": "123", "foo": "bar"}
+        /// See the language codes you can use here: https://documentation.onesignal.com/docs/frequently-asked-questions#section-what-languages-codes-can-i-use-
+        /// </summary>
+        [JsonProperty("data")]
+        public IDictionary<string, string> Data { get; set; }
+
+        /// <summary>
         /// Targets notification recipients with filters. 
         /// This is a array of JSON objects containing field conditions to check.
         /// </summary>
