@@ -2,7 +2,7 @@
 <package xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <metadata xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <id>OneSignal.CSharp.SDK</id>
-    <version>0.2</version>
+    <version>0.3</version>
     <authors>MundiPagg</authors>
     <owners>MundiPagg</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -14,7 +14,7 @@
     <tags>onesignal, push, notifications, mobile, android, ios</tags>
     <dependencies>
       <group targetFramework="net45">
-        <dependency id="Newtonsoft.Json" version="7.0.1" />
+        <dependency id="Newtonsoft.Json" version="9.0.1" />
       </group>
       <group targetFramework="net45">
         <dependency id="RestSharp" version="105.2.3" />
@@ -22,6 +22,6 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="net45\OneSignal.CSharp.SDK.dll" target="lib\net45" />
+    <file src="net45/OneSignal.CSharp.SDK.dll" target="lib\net45" />
   </files>
 </package>
