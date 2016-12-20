@@ -62,6 +62,9 @@
     <Compile Include="Resources\Devices\IDevicesResource.cs" />
     <Compile Include="Resources\Notifications\NotificationsResource.cs" />
     <Compile Include="Serializers\NewtonsoftJsonSerializer.cs" />
+    <Compile Include="Resources\Notifications\NotificationFilterField.cs" />
+    <Compile Include="Resources\Notifications\INotificationFilter.cs" />
+    <Compile Include="Resources\Notifications\NotificationFilterOperator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config">

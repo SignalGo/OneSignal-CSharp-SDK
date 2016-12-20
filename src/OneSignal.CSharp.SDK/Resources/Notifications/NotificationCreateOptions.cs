@@ -49,7 +49,7 @@ namespace OneSignal.CSharp.SDK.Resources.Notifications
         /// This is a array of JSON objects containing field conditions to check.
         /// </summary>
         [JsonProperty("filters")]
-        public IList<object> Filters { get; set; }
+		public IList<INotificationFilter> Filters { get; set; }
 
         /// <summary>
         /// The segment names you want to target. 
