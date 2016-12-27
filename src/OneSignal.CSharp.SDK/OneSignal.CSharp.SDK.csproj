@@ -52,6 +52,7 @@
     <Compile Include="Resources\BaseResource.cs" />
     <Compile Include="Resources\Devices\DeviceAddOptions.cs" />
     <Compile Include="Resources\Devices\DeviceAddResult.cs" />
+    <Compile Include="Resources\Devices\DeviceEditOptions.cs" />
     <Compile Include="Resources\Devices\DevicesResource.cs" />
     <Compile Include="Resources\Devices\DeviceTypeEnum.cs" />
     <Compile Include="Resources\Devices\TestTypeEnum.cs" />
