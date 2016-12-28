@@ -25,4 +25,4 @@ client.Notifications.Create(options);
 ```
 
 ## OneSignal Api Oficial Documentation
-[OneSignal Server API] (https://documentation.onesignal.com/v2.0/docs/server-api-overview)
+[OneSignal Server API] (https://documentation.onesignal.com/reference)
