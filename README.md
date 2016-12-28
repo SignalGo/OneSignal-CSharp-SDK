@@ -12,7 +12,7 @@ PM> Install-Package OneSignal.CSharp.SDK
 
 ## How to use
 
-```
+```csharp
 var client = new OneSignalClient("ZWM3YThlMmQtMzY1NC00ODI1LTlkYjMtMTk3MzI2OTQzMjVh");
 
 var options = new NotificationCreateOptions();
