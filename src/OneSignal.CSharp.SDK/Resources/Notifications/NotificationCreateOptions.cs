@@ -49,7 +49,7 @@ namespace OneSignal.CSharp.SDK.Resources.Notifications
         /// This is a array of JSON objects containing field conditions to check.
         /// </summary>
         [JsonProperty("filters")]
-		public IList<INotificationFilter> Filters { get; set; }
+        public IList<INotificationFilter> Filters { get; set; }
 
         /// <summary>
         /// The segment names you want to target. 
@@ -59,6 +59,12 @@ namespace OneSignal.CSharp.SDK.Resources.Notifications
         [JsonProperty("included_segments")]
         public IList<string> IncludedSegments { get; set; }
 
+        /// <summary>
+        /// Specific players to send your notification to. Does not require API Auth Key.
+        /// Do not combine with other targeting parameters.Not compatible with any other targeting parameters.Example: "1dd608f2-c6a1-11e3-851d-000c2940e62c"
+        /// </summary>
+        [JsonProperty("include_player_ids")]
+        public IList<string> IncludedPlayerIds { get; set; }
         /// <summary>
         /// Sets the web push notification's icon. 
         /// An image URL linking to a valid image. 
@@ -73,6 +79,7 @@ namespace OneSignal.CSharp.SDK.Resources.Notifications
         {
             Contents = new Dictionary<string, string>();
             Headings = new Dictionary<string, string>();
+            //IncludedPlayerIds = new List<string>();
         }
     }
 }
